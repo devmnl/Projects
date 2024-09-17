@@ -10,7 +10,7 @@
     background-color: #f0f2f5; /* Fundo claro e suave */
     color: #333;
     line-height: 1.6;
-    min-height: 100vh;
+    min-height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
