@@ -136,6 +136,22 @@
   cursor: pointer;
   width: 100%;
 }
+
+.button-sind {
+  display: inline-block;
+  background-color: #f19925;
+  color: white;
+  padding: 12px 25px;
+  margin: 4px;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.1rem;
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+}
   
   button:hover, .button:hover, button:focus, .button:focus {
     background-color: #4054b2;
@@ -150,6 +166,11 @@
 
   .button-sentidos:hover {
     background-color: #1873be;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
+  }
+
+  .button-sind:hover {
+    background-color: #ee8127;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
   }
 
