@@ -148,6 +148,23 @@
   cursor: pointer;
   width: 100%;
 }
+
+.button-vemax {
+  display: inline-block;
+  background-color: #000000;
+  color: rgb(249, 253, 4);
+  padding: 12px 25px;
+  margin: 4px;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.1rem;
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+}
   
   button:hover, .button:hover, button:focus, .button:focus {
     background-color: #4054b2;
