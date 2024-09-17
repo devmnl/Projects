@@ -200,4 +200,28 @@
     line-height: 1.6;
   }
   
-  
+/* Estilos gerais para o link */
+.custom-link {
+  color: #333; /* Cor do texto do link */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  font-weight: normal; /* Peso da fonte normal */
+  font-size: 1rem; /* Tamanho da fonte */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Transição suave para cor e decoração */
+}
+
+/* Estilo quando o link está sendo focado ou é clicado */
+.custom-link:hover, .custom-link:focus {
+  color: #007bff; /* Cor do texto ao passar o mouse ou quando em foco */
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse ou quando em foco */
+}
+
+/* Estilo para quando o link é clicado */
+.custom-link:active {
+  color: #0056b3; /* Cor do texto quando o link é clicado */
+}
+
+/* Estilo opcional para melhorar a acessibilidade */
+.custom-link:focus {
+  outline: 2px solid #007bff; /* Adiciona um contorno ao focar para acessibilidade */
+  outline-offset: 2px; /* Adiciona um espaço entre o contorno e o texto */
+}
