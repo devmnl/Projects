@@ -200,28 +200,32 @@
     line-height: 1.6;
   }
   
-/* Estilos gerais para o link */
-.custom-link {
-  color: #333; /* Cor do texto do link */
-  text-decoration: none; /* Remove o sublinhado padrão */
-  font-weight: normal; /* Peso da fonte normal */
-  font-size: 1rem; /* Tamanho da fonte */
-  transition: color 0.3s ease, text-decoration 0.3s ease; /* Transição suave para cor e decoração */
+/* Estilos gerais para o rodapé */
+.footer {
+  position: fixed; /* Fixa o rodapé na parte inferior da página */
+  bottom: 0; /* Posiciona o rodapé no fundo */
+  width: 100%; /* Faz o rodapé ocupar toda a largura da página */
+  background-color: #f8f9fa; /* Cor de fundo do rodapé */
+  color: #333; /* Cor do texto */
+  text-align: center; /* Centraliza o texto */
+  padding: 10px 0; /* Espaçamento interno */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  font-size: 0.9rem; /* Tamanho da fonte */
 }
 
-/* Estilo quando o link está sendo focado ou é clicado */
-.custom-link:hover, .custom-link:focus {
-  color: #007bff; /* Cor do texto ao passar o mouse ou quando em foco */
+/* Estilo do link no rodapé */
+.footer-link {
+  color: #007bff; /* Cor do texto do link */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+.footer-link:hover, .footer-link:focus {
+  color: #0056b3; /* Cor do link ao passar o mouse ou quando em foco */
   text-decoration: underline; /* Adiciona sublinhado ao passar o mouse ou quando em foco */
 }
 
-/* Estilo para quando o link é clicado */
-.custom-link:active {
-  color: #0056b3; /* Cor do texto quando o link é clicado */
+/* Adiciona margem ao conteúdo para não sobrepor o rodapé */
+body {
+  margin-bottom: 50px; /* Espaço suficiente para o rodapé */
 }
 
-/* Estilo opcional para melhorar a acessibilidade */
-.custom-link:focus {
-  outline: 2px solid #007bff; /* Adiciona um contorno ao focar para acessibilidade */
-  outline-offset: 2px; /* Adiciona um espaço entre o contorno e o texto */
-}
