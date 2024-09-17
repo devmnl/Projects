@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcular Diâmetro da Bobina</title>
+  <link rel="stylesheet" href="/src/styles/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calcular Diâmetro da Bobina</h1>
+
+    <label for="diametro">Diâmetro (mm):</label>
+    <input type="number" id="diametro" min="0" placeholder="Digite o diâmetro em mm" />
+
+    <button onclick="calcularResultado()">Calcular Resultado</button>
+
+    <div id="resultadoDiametro" class="result hidden"></div>
+
+    <a href="index.html" class="button-back">Voltar</a>
+  </div>
+  
+  <div class="instruction-notice">
+    <h2>Aviso Importante</h2>
+    <p>Este cálculo é exclusivo para a máquina <strong>ReinaFlex</strong>. A ReinaFlex não possui sensores para realizar a parada automática de diâmetro, por isso este cálculo é necessário para garantir a precisão do processo. Certifique-se de inserir o diâmetro correto para obter resultados precisos.</p>
+  </div>
+
+
+  <script>
+    function calcularResultado() {
+      const diametro = document.getElementById('diametro').value;
+      let resultado = '';
+      switch (parseInt(diametro)) {
+        case 200: resultado = '5,4'; break;
+        case 210: resultado = '5,9'; break;
+        case 220: resultado = '6,4'; break;
+        case 230: resultado = '6,9'; break;
+        case 240: resultado = '7,4'; break;
+        case 250: resultado = '7,9'; break;
+        case 260: resultado = '8,4'; break;
+        case 270: resultado = '8,9'; break;
+        case 280: resultado = '9,4'; break;
+        case 290: resultado = '9,9'; break;
+        case 300: resultado = '10,4'; break;
+        case 310: resultado = '10,9'; break;
+        case 320: resultado = '11,4'; break;
+        case 330: resultado = '11,9'; break;
+        case 340: resultado = '12,4'; break;
+        case 350: resultado = '12,9'; break;
+        case 360: resultado = '13,4'; break;
+        case 370: resultado = '13,9'; break;
+        case 380: resultado = '14,4'; break;
+        case 390: resultado = '14,9'; break;
+        case 400: resultado = '15,4'; break;
+        default: resultado = 'Número fora da faixa de cálculo.'; break;
+      }
+
+      let resultadoElement = document.getElementById('resultadoDiametro');
+      resultadoElement.innerText = resultado + " cm";
+      resultadoElement.classList.remove('hidden');
+
+      // Tornar o resultado visível
+    resultadoElement.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
