@@ -17,6 +17,21 @@
     flex-direction: column;
 
   }
+
+  header {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    background-color: #f0f2f5; /* Fundo claro e suave */
+  }
+  
+  .logo {
+    height: 250px; /* Adjust as needed */
+    margin-right: 15px;
+  }
+
+
+  
   
   .container {
     max-width: 600px;
@@ -47,7 +62,7 @@
     text-align: center;
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #4a4a4a;
+    color: #5271ff;
   }
   
   label {
