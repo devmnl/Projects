@@ -3,8 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página de Notícias</title>
+  <title>Sobre Manoel Franco</title>
   <link rel="stylesheet" href="/aboutme.css">
+  <style>
+    /* Estilo geral */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #abedf8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Container principal */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Estilo do cabeçalho */
+    .header {
+      text-align: center;
+      padding: 30px;
+      background: linear-gradient(135deg, #6A82FB, #FC5C7D);
+      color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .header h1 {
+      font-size: 2.5rem;
+    }
+
+    /* Estilo da grid de notícias */
+    .news-grid {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .news-item {
+      width: 250px;
+      height: 250px;
+      background-color: #fff;
+      margin: 10px;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .news-item:hover {
+      transform: scale(1.05);
+    }
+
+    .news-item img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    /* Estilo para as seções de habilidades */
+    h2, h3 {
+      text-align: center;
+      color: #4A4A4A;
+    }
+
+    .skills-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .skills-container img {
+      margin: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .skills-container img:hover {
+      transform: rotate(10deg) scale(1.1);
+    }
+
+    /* Estilo dos botões de contato */
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .contact-buttons a {
+      margin: 0 10px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .contact-buttons img {
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-buttons a:hover img {
+      transform: translateY(-5px);
+    }
+
+    /* Estilo do footer */
+    .footer {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .footer a {
+      background-color: #FC5C7D;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .footer a:hover {
+      background-color: #6A82FB;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -13,60 +134,57 @@
     </header>
 
     <main class="main-content">
-      <div class="news-grid">
-        <div align="center">
-          
-            <a href="https://github.com/devmnl">
-              <img src="https://img.shields.io/github/followers/devmnl?label=Follow&style=social" alt="GitHub Follow">
-            </a>
-          
-            <h2>My Skills 🎯</h2>
-          
-            <h3>Languages</h3>
-            <div style="display: inline_block;">
-              <img align="center" alt="Java" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
-              <img align="center" alt="Kotlin" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg">
-              <img align="center" alt="JavaScript" height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-              <img align="center" alt="TypeScript" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg">
-              <img align="center" alt="HTML" height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
-              <img align="center" alt="CSS" height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-            </div>
-          
-            <h3>Frameworks and Libraries</h3>
-            <div style="display: inline_block;">
-              <img align="center" alt="React" height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
-              <img align="center" alt="NodeJs" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg">
-              <img align="center" alt="Bootstrap" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg">
-              <img align="center" alt="Spring Boot" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg">
-            </div>
-          
-            <h3>Databases</h3>
-            <div style="display: inline_block;">
-              <img align="center" alt="MongoDB" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg">
-              <img align="center" alt="PostgreSQL" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg">
-            </div>
-          
-            <h2>Contact Me 📫</h2>
-          
-            <div>
-              <a href="https://meu-linktree-chi.vercel.app/" target="_blank">
-                <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
-              </a>
-              <a href="https://www.linkedin.com/in/manoel-franco-fernandes-neto-6260a0281/" target="_blank">
-                <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-              </a>
-              <a href="https://wa.me/+5511932590460" target="_blank">
-                <img src="https://img.shields.io/badge/-WhatsApp-%25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp">
-              </a>
-              <a href="https://t.me/+5511932590460" target="_blank">
-                <img src="https://img.shields.io/badge/-Telegram-%2300B2EE?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram">
-            </div>
-          
+      <section>
+        <h2>My Skills 🎯</h2>
+        <div class="skills-container">
+          <h3>Languages</h3>
+          <div>
+            <img alt="Java" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
+            <img alt="Kotlin" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg">
+            <img alt="JavaScript" height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+            <img alt="TypeScript" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg">
+            <img alt="HTML" height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+            <img alt="CSS" height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
           </div>
-        <!-- Notícia 1 -->
+          
+          <h3>Frameworks and Libraries</h3>
+          <div>
+            <img alt="React" height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+            <img alt="NodeJs" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg">
+            <img alt="Bootstrap" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg">
+            <img alt="Spring Boot" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg">
+          </div>
+
+          <h3>Databases</h3>
+          <div>
+            <img alt="MongoDB" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg">
+            <img alt="PostgreSQL" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Contact Me 📫</h2>
+        <div class="contact-buttons">
+          <a href="https://meu-linktree-chi.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
+          </a>
+          <a href="https://www.linkedin.com/in/manoel-franco-fernandes-neto-6260a0281/" target="_blank">
+            <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+          </a>
+          <a href="https://wa.me/+5511932590460" target="_blank">
+            <img src="https://img.shields.io/badge/-WhatsApp-%25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp">
+          </a>
+          <a href="https://t.me/+5511932590460" target="_blank">
+            <img src="https://img.shields.io/badge/-Telegram-%2300B2EE?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram">
+          </a>
+        </div>
+      </section>
+      
+      <div class="news-grid">
         <div class="news-item">   
           <a href="https://www.linkedin.com/in/devmnl/">
-            <img src="/images/work.png" alt="Imagem da notícia 1">
+            <img src="/images/work.png" alt="Trabalhos recentes">
           </a>
         </div>
       </div>
