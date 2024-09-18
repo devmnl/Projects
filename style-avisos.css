@@ -28,7 +28,7 @@ body {
 .news-grid {
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 60px;
+  gap: 30px;
 }
 
 .news-item {
