@@ -2,7 +2,7 @@
 "name": "FlexoTools",
 "short_name": "FlexoTools",
 "start_url": "https://flexotools.vercel.app",
-"display": "fullscreen",
+"display": "standalone",
 "description": "A description for your application",
 "lang": "portuguese",
 "dir": "auto",
