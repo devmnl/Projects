@@ -8,7 +8,7 @@
 "dir": "auto",
 "theme_color": "#5c6bc0",
 "background_color": "#f0f2f5",
-"orientation": "any",
+"orientation": "portrait",
 "icons": [
     {
         "src": "/images/flexologo.png",
