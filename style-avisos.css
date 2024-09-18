@@ -77,7 +77,8 @@ body {
 
 .footer {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 0px;
+  padding: 9px 9px 9px 30px;
 }
 
 .button-back {
