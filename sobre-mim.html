@@ -1,15 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre Manoel Franco</title>
-  <link rel="stylesheet" href="/aboutme.css">
   <style>
     /* Estilo geral */
     body {
       font-family: 'Arial', sans-serif;
-      background-color: #acafaf23;
+      background-color: #f4f4f9;
       color: #333;
       margin: 0;
       padding: 0;
@@ -18,15 +18,15 @@
     /* Container principal */
     .container {
       max-width: 1200px;
-      margin: 0;
+      margin: 0 auto;
       padding: 20px;
     }
 
-    /* Estilo do cabeçalho */
+    /* Estilo do cabeçalho com gradiente masculino */
     .header {
       text-align: center;
       padding: 30px;
-      background: linear-gradient(135deg, #6A82FB, #FC5C7D);
+      background: linear-gradient(135deg, #1e3c72, #2a5298, #11998e, #38ef7d);
       color: white;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -36,36 +36,7 @@
       font-size: 2.5rem;
     }
 
-    /* Estilo da grid de notícias */
-    .news-grid {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
-
-    .news-item {
-      width: 250px;
-      height: 250px;
-      background-color: #fff;
-      margin: 10px;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .news-item:hover {
-      transform: scale(1.05);
-    }
-
-    .news-item img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-
-    /* Estilo para as seções de habilidades */
+    /* Estilo da seção de habilidades */
     h2, h3 {
       text-align: center;
       color: #4A4A4A;
@@ -89,11 +60,12 @@
     .contact-buttons {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       margin-top: 30px;
     }
 
     .contact-buttons a {
-      margin: 0 10px;
+      margin: 10px;
       text-decoration: none;
       transition: all 0.3s;
     }
@@ -107,6 +79,18 @@
       transform: translateY(-5px);
     }
 
+    /* Estilo responsivo para dispositivos móveis */
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 1.8rem;
+      }
+      
+      .skills-container img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
     /* Estilo do footer */
     .footer {
       margin-top: 50px;
@@ -114,7 +98,7 @@
     }
 
     .footer a {
-      background-color: #FC5C7D;
+      background-color: #2a5298;
       color: white;
       padding: 10px 20px;
       text-decoration: none;
@@ -123,7 +107,7 @@
     }
 
     .footer a:hover {
-      background-color: #6A82FB;
+      background-color: #38ef7d;
     }
   </style>
 </head>
@@ -180,14 +164,6 @@
           </a>
         </div>
       </section>
-      
-      <div class="news-grid">
-        <div class="news-item">   
-          <a href="https://www.linkedin.com/in/devmnl/">
-            <img src="/images/work.png" alt="Trabalhos recentes">
-          </a>
-        </div>
-      </div>
     </main>
 
     <footer class="footer">
