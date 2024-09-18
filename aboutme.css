@@ -29,6 +29,12 @@
     height: auto;
     border-bottom: 2px solid #ddd;
   }
+
+  .news-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+  }
   
   .footer {
     text-align: center;

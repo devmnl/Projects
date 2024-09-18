@@ -168,7 +168,7 @@
 
 .button-aboutme {
   display: inline-block;
-  background-color: #7578ff;
+  background-color: #0067ee;
   color: rgb(255, 255, 255);
   padding: 12px 25px;
   margin: 4px;
@@ -204,7 +204,7 @@
   }
 
   .button-aboutme:hover {
-    background-color: #3e69f3;
+    background-color: #041b68;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
   }
 
