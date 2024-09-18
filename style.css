@@ -197,6 +197,12 @@
     border-radius: 10px;
     display: none;
   }
+
+  .highlight {
+    color: #ff5733; /* Cor para destacar */
+    font-weight: bold;
+  }
+  
   
   .result.visible {
     display: block;

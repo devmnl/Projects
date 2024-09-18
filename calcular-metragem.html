@@ -62,38 +62,39 @@
   }
 
   function calcularMetragem() {
-    // Obter os valores do formulário
-    let pesoDesejadoKg = parseFloat(document.getElementById('pesoDesejado').value);
-    let tipoBobina = document.getElementById('tipoBobina').value;
-    let larguraBobinaMm = parseFloat(document.getElementById('largura').value);
+  // Obter os valores do formulário
+  let pesoDesejadoKg = parseFloat(document.getElementById('pesoDesejado').value);
+  let tipoBobina = document.getElementById('tipoBobina').value;
+  let larguraBobinaMm = parseFloat(document.getElementById('largura').value);
 
-    // Validação dos valores
-    if (isNaN(pesoDesejadoKg) || pesoDesejadoKg <= 0) {
-      alert('Por favor, digite um valor válido para o peso desejado (em kg).');
-      return;
-    }
-    
-    if (isNaN(larguraBobinaMm) || larguraBobinaMm <= 0) {
-      alert('Por favor, digite um valor válido para a largura da bobina (em milímetros).');
-      return;
-    }
-
-    // Calcular metragem necessária
-    let metragemNecessaria = calcularMetragemParaPeso(pesoDesejadoKg, tipoBobina, larguraBobinaMm);
-    
-    // Verificar se o tipo de bobina é inválido
-    if (metragemNecessaria === -1) {
-      alert('Selecione um tipo de bobina válido.');
-      return;
-    }
-
-    // Exibir o resultado
-    let resultadoElement = document.getElementById('resultadoMetragem');
-    resultadoElement.innerText = 'Para obter ' + pesoDesejadoKg + ' kg, são necessários ' + metragemNecessaria.toFixed(0) + ' metros de bobina.';
-    
-    // Tornar o resultado visível
-    resultadoElement.style.display = 'block';
+  // Validação dos valores
+  if (isNaN(pesoDesejadoKg) || pesoDesejadoKg <= 0) {
+    alert('Por favor, digite um valor válido para o peso desejado (em kg).');
+    return;
   }
+  
+  if (isNaN(larguraBobinaMm) || larguraBobinaMm <= 0) {
+    alert('Por favor, digite um valor válido para a largura da bobina (em milímetros).');
+    return;
+  }
+
+  // Calcular metragem necessária
+  let metragemNecessaria = calcularMetragemParaPeso(pesoDesejadoKg, tipoBobina, larguraBobinaMm);
+  
+  // Verificar se o tipo de bobina é inválido
+  if (metragemNecessaria === -1) {
+    alert('Selecione um tipo de bobina válido.');
+    return;
+  }
+
+  // Exibir o resultado com o valor da metragem destacada
+  let resultadoElement = document.getElementById('resultadoMetragem');
+  resultadoElement.innerHTML = 'Para obter ' + pesoDesejadoKg + ' kg, são necessários <span class="highlight">' + metragemNecessaria.toFixed(0) + '</span> metros de bobina.';
+  
+  // Tornar o resultado visível
+  resultadoElement.style.display = 'block';
+}
+
 
   </script>
 </body>
