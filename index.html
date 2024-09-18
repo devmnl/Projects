@@ -10,7 +10,7 @@
   <style>
     /* Estilos básicos para o modal de senha */
     #passwordModal {
-      display: none; /* O modal será invisível por padrão */
+      display: flex; /* O modal será invisível por padrão */
       position: fixed;
       left: 0;
       top: 0;
@@ -44,8 +44,9 @@
     }
 
     input {
-       border-radius: 40px;
-       padding: 6px;
+       border-radius: 10px;
+       padding: 9px;
+       font-size: 15px;
        margin: 5px;
     }
 
@@ -99,7 +100,7 @@
   <div id="passwordModal">
     <div class="modal-content">
       <h2>(Exclusivo para operadores)<br>Didite a senha.</h2>
-      <input type="password" id="passwordInput" placeholder="Senha">
+      <input type="password" id="passwordInput" placeholder="Senha" inputmode="numeric" pattern="[0-9]*">
       
       <!-- Botões de ação no modal -->
       <div class="modal-buttons">
