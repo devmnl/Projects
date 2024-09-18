@@ -275,6 +275,13 @@
     font-size: 1em;
     line-height: 1.6;
   }
+
+  img {
+    margin-left: 0px;
+    text-align: center;
+    padding: 40px;
+  }
+
   
 /* Estilos gerais para o rodapé */
 .footer {
