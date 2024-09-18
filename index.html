@@ -1,82 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora de Bobinas</title>
-<script>navigator.serviceWorker.register("pwabuilder-adv-sw.js")</script> 
-<link rel="manifest" href="manifest.json" />  <link rel="stylesheet" href="/style.css">
-<style>
-  /* Estilos básicos para o modal de senha */
-  #passwordModal {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #passwordModal .modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-  }
-  .error-message {
-    color: red;
-    margin-top: 10px;
-    display: none;
-  }
-  .modal-buttons {
-    margin-top: 30px;
-  }
-  .modal-buttons button {
-    margin: 6px 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .close-modal {
-    background-color: #f44336;
-    color: white;
-  }
-  .enter-modal {
-    background-color: #4CAF50;
-    color: white;
-  }
-</style>
+  <script>navigator.serviceWorker.register("pwabuilder-adv-sw.js")</script>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    /* Estilos básicos para o modal de senha */
+    #passwordModal {
+      display: none; /* O modal será invisível por padrão */
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #passwordModal .modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .error-message {
+      color: red;
+      margin-top: 10px;
+      display: none;
+    }
+    .modal-buttons {
+      margin-top: 20px;
+    }
+    .modal-buttons button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .close-modal {
+      background-color: #f44336;
+      color: white;
+    }
+    .enter-modal {
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
 </head>
 <body>
   <header>
     <img src="/images/flexologo.png" alt="FlexoTools Logo" class="logo">
   </header>
-    
+
   <div class="container">
     <h1>FlexoTools</h1>
     <div class="button-container">
       <a href="/calcular-metragem.html" class="button">Calcular Metragem da Bobina</a>
       <a href="/calcular-diametro.html" class="button">Calcular Diâmetro da Bobina</a>
-      <a href="/pagina-de-avisos.html"  class="button-avisos">FlexoNews</a>
-      <a href="/tabela-sentidos.html"  class="button-sentidos">Sentidos de desbobinamento</a>
-      <a href="https://sindigraf.org.br/wp-content/uploads/2024/09/SINDIGRAF-SP-INFORMA-007-2024-FECHAMENTO-DETALHADO.pdf"  class="button-sind">SindGraf 2024</a>
-      <a href="/vemax.html"  class="button-vemax">VEMAX - VRXS STDH 1400</a>
-      <a href="/sobre-mim.html"  class="button-aboutme">Sobre mim</a>
+      <a href="/pagina-de-avisos.html" class="button-avisos">FlexoNews</a>
+      <a href="/tabela-sentidos.html" class="button-sentidos">Sentidos de desbobinamento</a>
+      <a href="https://sindigraf.org.br/wp-content/uploads/2024/09/SINDIGRAF-SP-INFORMA-007-2024-FECHAMENTO-DETALHADO.pdf" class="button-sind">SindGraf 2024</a>
+      <!-- Botão que abrirá o modal de senha -->
+      <button class="button-vemax" onclick="openPasswordModal()">VEMAX - VRXS STDH 1400</button>
+      <a href="/sobre-mim.html" class="button-aboutme">Sobre mim</a>
     </div>
   </div>
   <div class="empresas">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI-9xh_wRTjAbuFJXFoyHiFfm06tCMnjwyBA&s" alt="cromia">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI-9xh_wRTjAbuFJXFoyHiFfm06tCMnjwyBA&s" alt="cromia">
   </div>
   <footer class="footer">
     <a href="https://github.com/devmnl" class="footer-link" aria-label="Visite o perfil de Manoel Franco no GitHub">
-        By Manoel Franco
+      By Manoel Franco
     </a>
-</footer>
+  </footer>
 
   <!-- Modal para inserir a senha -->
   <div id="passwordModal">
@@ -117,6 +118,6 @@
       }
     }
   </script>
-
 </body>
 </html>
+
