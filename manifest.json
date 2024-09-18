@@ -11,13 +11,13 @@
 "orientation": "portrait",
 "icons": [
     {
-        "src": "/images/flexologo.png",
+        "src": "/images/FTools.png",
         "sizes": "512x512",
         "type": "image/png",
         "purpose": "maskable"
     },
     {
-        "src": "/images/flexologo.png",
+        "src": "/images/FTools.png",
         "sizes": "192x192",
         "type": "image/png",
         "purpose": "any"
