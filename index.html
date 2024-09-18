@@ -7,6 +7,50 @@
   <title>Calculadora de Bobinas</title>
 <script>navigator.serviceWorker.register("pwabuilder-adv-sw.js")</script> 
 <link rel="manifest" href="manifest.json" />  <link rel="stylesheet" href="/style.css">
+<style>
+  /* Estilos básicos para o modal de senha */
+  #passwordModal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #passwordModal .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .error-message {
+    color: red;
+    margin-top: 10px;
+    display: none;
+  }
+  .modal-buttons {
+    margin-top: 30px;
+  }
+  .modal-buttons button {
+    margin: 6px 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .close-modal {
+    background-color: #f44336;
+    color: white;
+  }
+  .enter-modal {
+    background-color: #4CAF50;
+    color: white;
+  }
+</style>
 </head>
 <body>
   <header>
@@ -33,5 +77,46 @@
         By Manoel Franco
     </a>
 </footer>
+
+  <!-- Modal para inserir a senha -->
+  <div id="passwordModal">
+    <div class="modal-content">
+      <h2>Insira a senha para acessar a página VEMAX</h2>
+      <input type="password" id="passwordInput" placeholder="Senha">
+      
+      <!-- Botões de ação no modal -->
+      <div class="modal-buttons">
+        <button class="enter-modal" onclick="checkPassword()">Entrar</button>
+        <button class="close-modal" onclick="closePasswordModal()">Cancelar</button>
+      </div>
+
+      <p class="error-message" id="errorMessage">Senha incorreta. Tente novamente.</p>
+    </div>
+  </div>
+
+  <script>
+    // Função para abrir o modal de senha
+    function openPasswordModal() {
+      document.getElementById('passwordModal').style.display = 'flex';
+    }
+
+    // Função para fechar o modal de senha
+    function closePasswordModal() {
+      document.getElementById('passwordModal').style.display = 'none';
+      document.getElementById('passwordInput').value = ''; // Limpa o campo de senha
+      document.getElementById('errorMessage').style.display = 'none'; // Esconde a mensagem de erro
+    }
+
+    // Função para verificar a senha
+    function checkPassword() {
+      var password = document.getElementById('passwordInput').value;
+      if (password === '8860') {
+        window.location.href = '/vemax.html'; // Redireciona para a página VEMAX
+      } else {
+        document.getElementById('errorMessage').style.display = 'block'; // Exibe a mensagem de erro
+      }
+    }
+  </script>
+
 </body>
 </html>
