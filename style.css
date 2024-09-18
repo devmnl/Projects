@@ -27,7 +27,8 @@
   
   .logo {
     height: 250px; /* Adjust as needed */
-    margin-right: 15px;
+    margin: 0px;
+    padding: 0;
   }
 
 
