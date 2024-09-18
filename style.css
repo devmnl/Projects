@@ -188,6 +188,11 @@
     outline: none;
   }
 
+  .button-vemax:hover {
+    background-color: #161616;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
+  }
+
   .button-avisos:hover {
     background-color: #4dc56b;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
