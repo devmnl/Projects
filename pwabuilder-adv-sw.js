@@ -1,3 +1,21 @@
 
-  import { precacheAndRoute } from 'workbox-precaching/precacheAndRoute';
-  precacheAndRoute([{"revision":"874b657f7148af98691dad1b3bd8f1dc","url":"aboutme.css"},{"revision":"6a2d20adacf5153dd8a3a84dd1bf1e31","url":"calcular-diametro.html"},{"revision":"44dd9ac3b153b03a7f9e66344b996a27","url":"calcular-metragem.html"},{"revision":"7656b32b30603453296544a5a6077cc8","url":"index.html"},{"revision":"4d0b7b9030aac4a81f414cddafc68e59","url":"pagina-de-avisos.html"},{"revision":"af5cd1b56e5853161916a4529f39b57d","url":"sobre-mim.html"},{"revision":"0ff3fff12de7f636f356b5a9bb7b0f0b","url":"style-avisos.css"},{"revision":"4f74af2e3b0e881a4906bc79201e3eb7","url":"style-sentidos.css"},{"revision":"2ba2be5f83d4783ae9e6f33f7126d8dd","url":"style.css"},{"revision":"3279e101c4400426b13078f24f533db1","url":"tabela-sentidos.html"},{"revision":"09dda91daebb44311515416c12bb4847","url":"vemax.css"},{"revision":"b92be6fe8fd36d54739bdd292e0f2024","url":"vemax.html"}]);
+// service-worker.js
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open('c').then(cache => {
+      return cache.addAll([
+        
+        'index.html',
+        // Adicione outros arquivos que deseja armazenar em cache
+      ]);
+    })
+  );
+});
+
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request).then(response => {
+      return response || fetch(event.request);
+    })
+  );
+});
