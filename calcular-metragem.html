@@ -14,6 +14,7 @@
       
         <label for="tipoBobina">Tipo de Bobina:</label>
         <select id="tipoBobina">
+          <option value="bopp30">BOPP 30µ</option>
           <option value="bopp20">BOPP 20µ</option>
           <option value="bopp17">BOPP 17µ</option>
           <option value="pet12">PET 12µ</option>
@@ -36,18 +37,23 @@
       function calcularMetragemParaPeso(pesoDesejadoKg, tipoBobina, larguraBobinaMm) {
     let densidade = 0;
     
-    // Definir densidades com base no tipo da bobina
-    if (tipoBobina === 'bopp20' || tipoBobina === 'bopp17') {
-      densidade = 0.905;
-    } else if (tipoBobina === 'pet12') {
-      densidade = 1.4;
-    } else if (tipoBobina === 'pp') {
-      densidade = 0.9;  // Densidade aproximada do Polipropileno (PP)
-    } else if (tipoBobina === 'pe') {
-      densidade = 0.94; // Densidade aproximada do Polietileno (PE)
-    } else {
-      return -1;  // Retorna -1 se o tipo de bobina não for válido
-    }
+  // Definir densidades específicas com base no tipo da bobina
+
+  if (tipoBobina === 'bopp20') {
+    densidade = 0.905;  // Densidade do BOPP 20 micras
+  } else if (tipoBobina === 'bopp30') {
+    densidade = 1.3575;  // Densidade ajustada para BOPP 17 micras
+  } else if (tipoBobina === 'bopp17') {
+    densidade = 0.76925;  // Densidade ajustada para BOPP 17 micras
+  } else if (tipoBobina === 'pet12') {
+    densidade = 1.4;
+  } else if (tipoBobina === 'pp') {
+    densidade = 0.9;  // Densidade aproximada do Polipropileno (PP)
+  } else if (tipoBobina === 'pe') {
+    densidade = 0.94; // Densidade aproximada do Polietileno (PE)
+  } else {
+    return -1;  // Retorna -1 se o tipo de bobina não for válido
+  }
     
     let larguraBobinaCm = larguraBobinaMm / 10;
     let metragem = 1;
