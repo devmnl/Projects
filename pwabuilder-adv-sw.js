@@ -1,21 +1,22 @@
 
-// service-worker.js
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open('c').then(cache => {
-      return cache.addAll([
-        
-        'index.html',
-        // Adicione outros arquivos que deseja armazenar em cache
-      ]);
-    })
-  );
-});
 
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request);
-    })
-  );
+// TODO: Install WorkBox-build from a command prompt
+// TODO:   npm install workbox-build
+const workboxBuild = require('workbox-build');
+const BUILD_DIR = 'dist';
+const SW = 'pwabuilder-adv-sw.js';
+
+const input ={
+  swDest: `${BUILD_DIR}/${SW}`,
+  globDirectory: BUILD_DIR,
+  globPatterns: [
+    '**/*.{js,png,ico,svg,html,css}',
+    //'assets/**/*'
+  ],
+  globIgnores: [],
+  maximumFileSizeToCacheInBytes: 4000000
+};
+
+workboxBuild.generateSW(input).then(() =>{
+  console.log(`The service worker ${BUILD_DIR}/${SW} has been generated with a precache list.`);
 });
