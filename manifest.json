@@ -2,7 +2,7 @@
 "protocol_handlers": [{"protocol":"mailto","url":"/newEmail?to=%s"}], 
 "name": "FlexoTools",
 "short_name": "FlexoTools",
-"start_url": "/",
+"start_url": "https://flexotools.vercel.app/index.html",
 "display": "standalone",
 "description": "O FlexoTools é uma aplicação web especializada no cálculo de métricas necessárias para diferentes tipos de bobinas, incluindo materiais como Polipropileno (PP) e Polietileno (PE). A ferramenta ajuda os usuários a determinar o comprimento necessário de uma bobina com base no peso e na largura desejados. O aplicativo é voltado para a indústria de embalagens flexíveis e inclui funcionalidades para cálculos precisos de diâmetro",
 "lang": "portuguese",
