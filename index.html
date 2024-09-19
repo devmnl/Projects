@@ -9,8 +9,8 @@
     />
     <title>Calculadora de Bobinas</title>
     <script>
-      if (typeof navigator.serviceWorker !== 'undefined') {
-        navigator.serviceWorker.register('sw.js')
+      if (typeof navigator.serviceWorker !== "undefined") {
+        navigator.serviceWorker.register("sw.js");
       }
     </script>
     <link rel="manifest" href="manifest.json" />
@@ -74,7 +74,7 @@
       .enter-modal:hover {
         background-color: #32d338;
       }
-      
+
       .button-download {
         display: inline-block;
         background: linear-gradient(135deg, #0033a0, #00b894, #ff007f);
@@ -204,6 +204,22 @@
           document.getElementById("errorMessage").style.display = "block"; // Exibe a mensagem de erro
         }
       }
+
+      // service work config
+      const CACHE_NAME = "cool-cache";
+
+      // Add whichever assets you want to pre-cache here:
+      const PRECACHE_ASSETS = ["/assets/", "/src/"];
+
+      // Listener for the install event - pre-caches our assets list on service worker install.
+      self.addEventListener("install", (event) => {
+        event.waitUntil(
+          (async () => {
+            const cache = await caches.open(CACHE_NAME);
+            cache.addAll(PRECACHE_ASSETS);
+          })()
+        );
+      });
     </script>
   </body>
 </html>
