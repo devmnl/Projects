@@ -10,7 +10,15 @@
     
     <title>Calculadora de Bobinas</title>
     <script>
-      navigator.serviceWorker.register("pwabuilder-adv-sw.js");
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('pwabuilder-adv-sw.js')
+          .then(() => {
+            console.log('Service Worker registrado com sucesso.');
+          })
+          .catch(error => {
+            console.error('Falha ao registrar o Service Worker:', error);
+          });
+      }
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="manifest" href="manifest.json" />
@@ -208,22 +216,6 @@
           document.getElementById("errorMessage").style.display = "block"; // Exibe a mensagem de erro
         }
       }
-
-      // service work config
-      const CACHE_NAME = "cool-cache";
-
-      // Add whichever assets you want to pre-cache here:
-      const PRECACHE_ASSETS = ["/assets/", "/src/"];
-
-      // Listener for the install event - pre-caches our assets list on service worker install.
-      self.addEventListener("install", (event) => {
-        event.waitUntil(
-          (async () => {
-            const cache = await caches.open(CACHE_NAME);
-            cache.addAll(PRECACHE_ASSETS);
-          })()
-        );
-      });
     </script>
   </body>
 </html>
