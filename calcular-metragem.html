@@ -14,9 +14,11 @@
       
         <label for="tipoBobina">Tipo de Bobina:</label>
         <select id="tipoBobina">
+          <option value="" disabled selected>Substrato</option>
           <option value="bopp30">BOPP 30µ</option>
           <option value="bopp20">BOPP 20µ</option>
           <option value="bopp17">BOPP 17µ</option>
+          <option value="boppPerola22">BOPP PEROLA 22µ</option>
           <option value="pet12">PET 12µ</option>
           <option value="pp">Polipropileno (PP)</option>
           <option value="pe">Polietileno (PE)</option>
@@ -36,71 +38,91 @@
   <script>
       function calcularMetragemParaPeso(pesoDesejadoKg, tipoBobina, larguraBobinaMm) {
     let densidade = 0;
-    
-  // Definir densidades específicas com base no tipo da bobina
-
-  if (tipoBobina === 'bopp20') {
-    densidade = 0.905;  // Densidade do BOPP 20 micras
-  } else if (tipoBobina === 'bopp30') {
-    densidade = 1.3575;  // Densidade ajustada para BOPP 17 micras
-  } else if (tipoBobina === 'bopp17') {
-    densidade = 0.76925;  // Densidade ajustada para BOPP 17 micras
-  } else if (tipoBobina === 'pet12') {
-    densidade = 1.4;
-  } else if (tipoBobina === 'pp') {
-    densidade = 0.9;  // Densidade aproximada do Polipropileno (PP)
-  } else if (tipoBobina === 'pe') {
-    densidade = 0.94; // Densidade aproximada do Polietileno (PE)
-  } else {
-    return -1;  // Retorna -1 se o tipo de bobina não for válido
-  }
-    
+    let espessuraCm = 0;
     let larguraBobinaCm = larguraBobinaMm / 10;
     let metragem = 1;
-    let peso = densidade * larguraBobinaCm * metragem * 0.0001;
-    
-    // Loop para encontrar a metragem necessária
-    while (peso < pesoDesejadoKg) {
-      metragem++;
-      peso = densidade * larguraBobinaCm * metragem * 0.0001;
+    let peso = 0;
+
+    if (tipoBobina === 'pet12') {
+        // Nova abordagem para PET 12 micras
+        densidade = 1.4;  // Densidade do PET
+        espessuraCm = 0.0012; // Espessura em cm (12 micras)
+        metragem = pesoDesejadoKg * 1000 / (densidade * larguraBobinaCm * espessuraCm);
+        return metragem;
+    } else if (tipoBobina === 'boppPerola22') {
+        // Abordagem para BOPP pérola 22 micras
+        densidade = 0.096;  // Densidade do BOPP pérola 22 micras
+        espessuraCm = 0.0022; // Espessura em cm (22 micras)
+        metragem = pesoDesejadoKg / (densidade * larguraBobinaCm * espessuraCm);
+        return metragem;
+    } else {
+        // Abordagem anterior para os outros tipos de bobina
+        if (tipoBobina === 'bopp20') {
+            densidade = 0.905;  // Densidade do BOPP 20 micras
+        } else if (tipoBobina === 'bopp30') {
+            densidade = 1.3575;  // Densidade ajustada para BOPP 30 micras
+        } else if (tipoBobina === 'bopp17') {
+            densidade = 0.76925;  // Densidade ajustada para BOPP 17 micras
+        } else if (tipoBobina === 'pp') {
+            densidade = 0.9;  // Densidade do Polipropileno (PP)
+        } else if (tipoBobina === 'pe') {
+            densidade = 0.94; // Densidade do Polietileno (PE)
+        } else {
+            return -1;  // Retorna -1 se o tipo de bobina não for válido
+        }
+
+        // Cálculo usando a abordagem antiga
+        peso = densidade * larguraBobinaCm * metragem * 0.0001;
+
+        // Loop para encontrar a metragem necessária
+        while (peso < pesoDesejadoKg) {
+            metragem++;
+            peso = densidade * larguraBobinaCm * metragem * 0.0001;
+        }
+
+        return metragem / 2;
+    }
+}
+
+function calcularMetragem() {
+    // Obter os valores do formulário
+    let pesoDesejadoKg = parseFloat(document.getElementById('pesoDesejado').value);
+    let tipoBobina = document.getElementById('tipoBobina').value;
+    let larguraBobinaMm = parseFloat(document.getElementById('largura').value);
+
+    // Validação dos valores
+    if (isNaN(pesoDesejadoKg) || pesoDesejadoKg <= 0) {
+        alert('Por favor, digite um valor válido para o peso desejado (em kg).');
+        return;
     }
     
-    return metragem / 2;
-  }
+    if (isNaN(larguraBobinaMm) || larguraBobinaMm <= 0) {
+        alert('Por favor, digite um valor válido para a largura da bobina (em milímetros).');
+        return;
+    }
 
-  function calcularMetragem() {
-  // Obter os valores do formulário
-  let pesoDesejadoKg = parseFloat(document.getElementById('pesoDesejado').value);
-  let tipoBobina = document.getElementById('tipoBobina').value;
-  let larguraBobinaMm = parseFloat(document.getElementById('largura').value);
+    // Calcular metragem necessária
+    let metragemNecessaria = calcularMetragemParaPeso(pesoDesejadoKg, tipoBobina, larguraBobinaMm);
+    
+    // Verificar se o tipo de bobina é inválido
+    if (metragemNecessaria === -1) {
+        alert('Selecione um tipo de bobina válido.');
+        return;
+    }
 
-  // Validação dos valores
-  if (isNaN(pesoDesejadoKg) || pesoDesejadoKg <= 0) {
-    alert('Por favor, digite um valor válido para o peso desejado (em kg).');
-    return;
-  }
-  
-  if (isNaN(larguraBobinaMm) || larguraBobinaMm <= 0) {
-    alert('Por favor, digite um valor válido para a largura da bobina (em milímetros).');
-    return;
-  }
+    // Formatando o resultado para ter 5 números e incluir o ponto de milhar
+    let metragemFormatada = metragemNecessaria.toFixed(0).slice(0, 5);
+    metragemFormatada = parseInt(metragemFormatada).toLocaleString('pt-BR');
 
-  // Calcular metragem necessária
-  let metragemNecessaria = calcularMetragemParaPeso(pesoDesejadoKg, tipoBobina, larguraBobinaMm);
-  
-  // Verificar se o tipo de bobina é inválido
-  if (metragemNecessaria === -1) {
-    alert('Selecione um tipo de bobina válido.');
-    return;
-  }
-
-  // Exibir o resultado com o valor da metragem destacada
-  let resultadoElement = document.getElementById('resultadoMetragem');
-  resultadoElement.innerHTML = 'Para obter ' + pesoDesejadoKg + ' kg, são necessários <span class="highlight">' + metragemNecessaria.toFixed(0) + '</span> metros de bobina.';
-  
-  // Tornar o resultado visível
-  resultadoElement.style.display = 'block';
+    // Exibir o resultado com o valor da metragem destacada
+    let resultadoElement = document.getElementById('resultadoMetragem');
+    resultadoElement.innerHTML = 'Para obter ' + pesoDesejadoKg + ' kg, são necessários <span class="highlight">' + metragemFormatada + '</span>m de bobina.';
+    
+    // Tornar o resultado visível
+    resultadoElement.style.display = 'block';
 }
+
+
 
 
   </script>
