@@ -9,6 +9,9 @@ self.addEventListener('install', (event) => {
       return cache.addAll([
         offlineFallbackPage,
         // outros arquivos que você precisa
+        'calculadora-diametro.html',
+        'calculadora-metragem.html',
+        'tabela-sentidos.html',
       ]);
     })
   );
