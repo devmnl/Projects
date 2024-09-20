@@ -35,6 +35,12 @@ self.addEventListener('activate', event => {
     );
 });
 
+self.addEventListener('fetch', event => {
+    console.log('Interceptando a requisição para:', event.request.url);
+    // O restante do código...
+});
+
+
 // Evento fetch
 self.addEventListener('fetch', event => {
     // Lista de hostnames permitidos
