@@ -8,7 +8,7 @@
       content="Gk2gMqlRLZyVy4EyMAQE_Gk2zYKq_0P5txKx7khyy80"
     />
 
-    <title>Calculadora de Bobinas</title>
+    <title>FlexoTools</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -262,6 +262,20 @@
 
       // Iniciar o slideshow
       window.onload = changeImage;
+
+        // Função para exibir alerta de atualização do APK
+  window.onload = function () {
+    // Iniciar o slideshow
+    changeImage();
+
+    // Mensagem de alerta para atualização
+    const updateAlert = confirm("Uma nova atualização do FlexoTools está disponível. Deseja fazer o download do APK?");
+    
+    // Verifica se o usuário clicou em "OK" no alerta
+    if (updateAlert) {
+      window.location.href = "/FlexoTools.apk"; // Redireciona para o download do APK
+    }
+  };
     </script>
   </body>
 </html>
