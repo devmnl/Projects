@@ -9,7 +9,18 @@
     />
 
     <title>Calculadora de Bobinas</title>
-    <script>navigator.serviceWorker.register("/pwabuilder-sw.js")</script> 
+    <script>
+      navigator.serviceWorker
+        .getRegistrations()
+        .then(function (registrations) {
+          for (let registration of registrations) {
+            registration.unregister();
+          }
+        })
+        .then(function () {
+          navigator.serviceWorker.register("/pwabuilder-sw.js");
+        });
+    </script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -174,11 +185,11 @@
     </div>
 
     <div class="empresas">
-      <img src="/images/lexotools.png" alt="Empresa 3" class="active"/>
-      <img src="/images/toder.png" alt="Cromia"  />
+      <img src="/images/lexotools.png" alt="Empresa 3" class="active" />
+      <img src="/images/toder.png" alt="Cromia" />
       <img src="/images/comexi-logo.png" alt="Empresa 3" />
       <img src="/images/reinaflex.png" alt="Empresa 2" />
-      
+
       <!-- Adicione mais imagens conforme necessário -->
     </div>
 
@@ -248,7 +259,6 @@
 
         // Torna a primeira imagem visível
         images[currentIndex].classList.add("active");
-        
 
         setInterval(() => {
           images[currentIndex].classList.remove("active");

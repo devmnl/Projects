@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "workbox-precaching": "^7.1.0"
-  },
-  "devDependencies": {
-    "workbox-build": "^7.1.1"
-  }
-}
