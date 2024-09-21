@@ -17,7 +17,7 @@ workbox.routing.registerRoute(
   })
 );
 
-const offlineFallbackPage = "/index.html";
+const offlineFallbackPage = "https://flexotools.vercel.app/index.html";
 
 self.addEventListener('install', async (event) => {
   event.waitUntil(
