@@ -186,6 +186,27 @@
   cursor: pointer;
   width: 100%;
 }
+
+.button-manual {
+  display: inline-block;
+  background: linear-gradient(135deg, #6a11cb, #b721ff, #fc4a1a, #f7b733);
+  color: rgb(255, 255, 255);
+  padding: 12px 25px;
+  margin: 4px;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.1rem;
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button-manual:hover {
+  background: linear-gradient(135deg, #8e2de2, #f091ff, #ff8c68, #ffef82);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.589);
+}
   
   button:hover, .button:hover, button:focus, .button:focus {
     background-color: #4054b2;
@@ -308,13 +329,14 @@
 
 /* Estilo do link no rodapé */
 .footer-link {
-  color: #5271ff;
+  color: #6c74e6;
+  font-weight: bold;
   text-decoration: none; /* Remove o sublinhado */
 }
 
 .footer-link:hover, .footer-link:focus {
-  color: #0056b3; /* Cor do link ao passar o mouse ou quando em foco */
-  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse ou quando em foco */
+  color: #27eb37; /* Cor do link ao passar o mouse ou quando em foco */
+  text-decoration: none; /* Adiciona sublinhado ao passar o mouse ou quando em foco */
 }
 
 /* Adiciona margem ao conteúdo para não sobrepor o rodapé */
