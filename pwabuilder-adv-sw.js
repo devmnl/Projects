@@ -6,15 +6,15 @@ const URLS_TO_CACHE = [
     '/',
 ];
 
-// Instalando o Service Worker
 self.addEventListener('install', (event) => {
-    event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then((cache) => {
-                console.log('Cache aberto com sucesso');
-                return cache.addAll(URLS_TO_CACHE);
-            })
-    );
+  event.waitUntil(
+      caches.open(CACHE_NAME).then((cache) => {
+          console.log('Cache aberto com sucesso');
+          return cache.addAll(URLS_TO_CACHE).catch((error) => {
+              console.error('Erro ao adicionar itens ao cache:', error);
+          });
+      })
+  );
 });
 
 // Ativando o Service Worker
