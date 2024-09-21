@@ -4,9 +4,6 @@ const CACHE_NAME = 'my-app-cache-v1';
 // Arquivos a serem armazenados em cache
 const URLS_TO_CACHE = [
     '/',
-    '/index.html',
-    '/style.css',
-    '/images',
 ];
 
 // Instalando o Service Worker
