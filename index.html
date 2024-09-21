@@ -112,7 +112,7 @@
       .empresas {
         width: 100%;
         max-width: 300px;
-        margin: 0px auto;
+        margin: 30px auto;
         overflow: hidden;
         position: relative;
       }
@@ -178,10 +178,11 @@
     </div>
 
     <div class="empresas">
-      <img src="/images/toder.png" alt="Cromia" class="active" />
+      <img src="/images/LexoTools.png" alt="Empresa 3" class="active"/>
+      <img src="/images/toder.png" alt="Cromia"  />
       <img src="/images/comexi-logo.png" alt="Empresa 3" />
       <img src="/images/reinaflex.png" alt="Empresa 2" />
-      <img src="/images/LexoTools.png" alt="Empresa 3" />
+      
       <!-- Adicione mais imagens conforme necessário -->
     </div>
 
@@ -257,7 +258,7 @@
           images[currentIndex].classList.remove("active");
           currentIndex = (currentIndex + 1) % images.length; // Move para a próxima imagem
           images[currentIndex].classList.add("active");
-        }, 6000); // Troca de imagem a cada 2 segundos
+        }, 8000); // Troca de imagem a cada 2 segundos
       }
 
       // Iniciar o slideshow
