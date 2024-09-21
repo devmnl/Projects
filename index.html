@@ -9,24 +9,13 @@
     />
 
     <title>Calculadora de Bobinas</title>
-    <script>
-      navigator.serviceWorker
-        .getRegistrations()
-        .then(function (registrations) {
-          for (let registration of registrations) {
-            registration.unregister();
-          }
-        })
-        .then(function () {
-          navigator.serviceWorker.register("/pwabuilder-sw.js");
-        });
-    </script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="/style.css" />
+    <script>navigator.serviceWorker.register("/pwabuilder-adv-sw.js")</script> 
     <style>
       /* Estilos básicos para o modal de senha */
       #passwordModal {
@@ -136,6 +125,7 @@
         display: block;
         opacity: 1;
       }
+  
     </style>
   </head>
   <body>
