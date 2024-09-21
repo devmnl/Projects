@@ -203,10 +203,6 @@
   width: 100%;
 }
 
-.button-manual:hover {
-  background: linear-gradient(135deg, #8e2de2, #f091ff, #ff8c68, #ffef82);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.589);
-}
   
   button:hover, .button:hover, button:focus, .button:focus {
     background-color: #4054b2;
