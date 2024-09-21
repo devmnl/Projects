@@ -53,9 +53,36 @@
     transform: translateY(-5px); /* Efeito de hover */
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Sombra ao passar o mouse */
   }
+
+  .container-metragem {
+    max-width: 500px;
+    margin: 50px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-items: center; /* Centraliza itens horizontalmente */
+    justify-content: center; /* Centraliza itens verticalmente */
+    text-align: center; /* Centraliza o texto dentro do container */
+    display: block;
+    clear: both;
+  }
   
-  
+  .container-metragem:hover {
+    transform: translateY(-5px); /* Efeito de hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Sombra ao passar o mouse */
+  }
+
   h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #5271ff;
+  }
+  
+  
+  .h1-metragem {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 20px;
