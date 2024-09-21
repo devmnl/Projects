@@ -330,10 +330,7 @@
   text-decoration: none; /* Remove o sublinhado */
 }
 
-.footer-link:hover, .footer-link:focus {
-  color: #27eb37; /* Cor do link ao passar o mouse ou quando em foco */
-  text-decoration: none; /* Adiciona sublinhado ao passar o mouse ou quando em foco */
-}
+
 
 /* Adiciona margem ao conteúdo para não sobrepor o rodapé */
 body {
