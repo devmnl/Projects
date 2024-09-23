@@ -1,0 +1,123 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #0044cc;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as seções se movam para a próxima linha em telas pequenas */
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 30px;
+    padding: 0 10px; /* Adiciona um pouco de padding nas laterais */
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(45% - 20px); /* Ajusta a largura para permitir margens */
+    margin: 10px; /* Adiciona margem para espaçamento */
+}
+
+h2.vemax {
+    text-align: center;
+    color: #7c7575;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: yellow;
+    border-radius: 30px;
+    padding: 5px;
+    border: 2px solid; /* Defina a largura e o estilo da borda */
+    border-color: #7c7575;
+
+}
+
+h2.profama {
+    text-align: center;
+    color: rgb(253, 115, 3);
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #c51d1dd0;
+    border-radius: 30px;
+    padding: 5px;
+    border: 2px solid; /* Defina a largura e o estilo da borda */
+    border-color: #030303;
+}
+
+canvas {
+    margin: 20px 0;
+    max-width: 100%; /* Garante que o canvas não exceda a largura da tela */
+}
+
+.ranking div {
+    margin-bottom: 10px;
+    background-color: #0000000e;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center; /* Alinha o texto ao centro em relação à imagem */
+}
+
+.ranking img {
+    width: 40px; /* Tamanho das mini fotos */
+    height: 40px;
+    border-radius: 50%; /* Deixa as imagens redondas */
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em; /* Reduz o tamanho da fonte em telas menores */
+    }
+
+    section {
+        width: 100%; /* Faz as seções ocuparem toda a largura em telas pequenas */
+        margin: 10px 0; /* Adiciona margem vertical */
+    }
+
+    .ranking img {
+        width: 30px; /* Ajusta o tamanho das imagens em dispositivos móveis */
+        height: 30px;
+    }
+
+    .ranking div {
+        padding: 8px; /* Ajusta o padding em dispositivos móveis */
+    }
+}
+
+.button-back {
+    text-decoration: none;
+    padding: 10px 20px;
+    background:#032ef1;
+    color: #ffffff; /* Cor branca para o texto */
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    border: none; /* Remover a borda */
+    margin: 7px;
+    font-weight: bold;
+  }
+  
