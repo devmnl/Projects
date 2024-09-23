@@ -28,6 +28,11 @@ h1 {
     font-size: 2em;
 }
 
+p{
+    color: gray;
+    text-align: center;
+}
+
 main {
     display: flex;
     flex-direction: column; /* Coloca os itens em coluna */
