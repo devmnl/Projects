@@ -1,130 +1,124 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Poppins', sans-serif; /* Fonte moderna */
-    background-color: #f0f2f5; /* Fundo claro e suave */
-    color: #333;
-    line-height: 1.6;
-    min-height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  }
+body {
+  font-family: "Poppins", sans-serif; /* Fonte moderna */
+  background-color: #f0f2f5; /* Fundo claro e suave */
+  color: #333;
+  line-height: 1.6;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-  header {
-    display: flex;
-    align-items: center;
-    padding: 0px;
-    background-color: #f0f2f5; /* Fundo claro e suave */
-  }
-  
-  .logo {
-    height: 150px; /* Adjust as needed */
-    margin: 0px;
-    padding: 0;
-  }
+header {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  background-color: #f0f2f5; /* Fundo claro e suave */
+}
 
+.logo {
+  height: 150px; /* Adjust as needed */
+  margin: 0px;
+  padding: 0;
+}
 
-  
-  
-  .container {
-    max-width: 600px;
-    margin: 0px;
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    align-items: center; /* Centraliza itens horizontalmente */
-    justify-content: center; /* Centraliza itens verticalmente */
-    text-align: center; /* Centraliza o texto dentro do container */
-    display: block;
-    clear: both;
-  }
-  
-  .container:hover {
-    transform: translateY(-5px); /* Efeito de hover */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Sombra ao passar o mouse */
-  }
+.container {
+  max-width: 600px;
+  margin: 0px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: center; /* Centraliza itens horizontalmente */
+  justify-content: center; /* Centraliza itens verticalmente */
+  text-align: center; /* Centraliza o texto dentro do container */
+  display: block;
+  clear: both;
+}
 
+.container:hover {
+  transform: translateY(-5px); /* Efeito de hover */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Sombra ao passar o mouse */
+}
 
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #5271ff;
+}
 
-  h1 {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #5271ff;
-  }
-  
-  
+label {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  display: block;
+  color: #5c6bc0;
+}
 
-  
-  label {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    display: block;
-    color: #5c6bc0;
-  }
-  
-  input[type="number"], select {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #dcdcdc;
-    border-radius: 10px;
-    font-size: 1rem;
-    background-color: #f9f9f9;
-    color: #333;
-    transition: border 0.3s ease;
-  }
-  
-  input[type="number"]:focus, select:focus {
-    border-color: #5c6bc0; /* Cor de foco */
-    outline: none;
-  }
-  
-  button, .button {
-    display: inline-block;
-    background-color: #5c6bc0;
-    color: white;
-    padding: 12px 25px;
-    margin: 4px;
-    border-radius: 10px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 1.1rem;
-    border: none;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    width: 100%;
-  }
+input[type="number"],
+select {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: border 0.3s ease;
+}
 
-    .button-avisos {
-    display: inline-block;
-    background-color: #16c792;
-    color: white;
-    padding: 12px 25px;
-    margin: 4px;
-    border-radius: 10px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 1.1rem;
-    border: none;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    width: 100%;
- }
+input[type="number"]:focus,
+select:focus {
+  border-color: #5c6bc0; /* Cor de foco */
+  outline: none;
+}
 
- .button-sentidos {
+button,
+.button {
   display: inline-block;
-  background-color: #178dc4;
+  background-color: #5c6bc0;
+  color: white;
+  padding: 12px 25px;
+  margin: 4px;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.1rem;
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button-avisos {
+  display: inline-block;
+  background-color: #16c792;
+  color: white;
+  padding: 12px 25px;
+  margin: 4px;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.1rem;
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button-sentidos {
+  display: inline-block;
+  background-color: #5c6bc0;
   color: white;
   padding: 12px 25px;
   margin: 4px;
@@ -156,8 +150,8 @@
 
 .button-vemax {
   display: inline-block;
-  background-color: #000000;
-  color: rgb(249, 253, 4);
+  background-color: yellow;
+  color: #363535;
   padding: 12px 25px;
   margin: 4px;
   border-radius: 10px;
@@ -169,6 +163,8 @@
   cursor: pointer;
   width: 100%;
   font-weight: bold;
+  border: 2px solid; /* Defina a largura e o estilo da borda */
+  border-color: #383737;
 }
 
 .button-aboutme {
@@ -203,108 +199,109 @@
   width: 100%;
 }
 
-  
-  button:hover, .button:hover, button:focus, .button:focus {
-    background-color: #4054b2;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
-    outline: none;
-  }
+button:hover,
+.button:hover,
+button:focus,
+.button:focus {
+  background-color: #4054b2;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
+  outline: none;
+}
 
-  .button-vemax:hover {
-    background-color: #161616;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
-  }
+.button-vemax:hover {
+  background-color: #bfc206;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
+}
 
-  .button-avisos:hover {
-    background-color: #4dc56b;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
-  }  
+.button-avisos:hover {
+  background-color: #4dc56b;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
+}
 
-  .button-sentidos:hover {
-    background-color: #1873be;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
-  }
+.button-sentidos:hover {
+  background-color: #1873be;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
+}
 
-  .button-sind:hover {
-    background-color: #eeaf27;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
-  }
+.button-sind:hover {
+  background-color: #eeaf27;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
+}
 
-  .button-aboutme:hover {
-    background-color: #041b68;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
-  }
+.button-aboutme:hover {
+  background-color: #041b68;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
+}
 
+.result {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-left: 4px solid #5c6bc0;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  display: none;
+}
 
-  .result {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #f4f4f9;
-    border-left: 4px solid #5c6bc0;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    display: none;
-  }
+.highlight {
+  color: #ff5733; /* Cor para destacar */
+  font-weight: bold;
+}
 
-  .highlight {
-    color: #ff5733; /* Cor para destacar */
-    font-weight: bold;
-  }
-  
-  
-  .result.visible {
-    display: block;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  a.button-back {
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-    background-color: #333;
-    padding: 10px 20px;
-    color: #fff;
-    display: inline-block;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-    text-align: center;
-  }
-  
-  a.button-back:hover, a.button-back:focus {
-    background-color: #444;
-    outline: none;
-  }
+.result.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+a.button-back {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  background-color: #333;
+  padding: 10px 20px;
+  color: #fff;
+  display: inline-block;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+a.button-back:hover,
+a.button-back:focus {
+  background-color: #444;
+  outline: none;
+}
 
 /* Estilo para o aviso fixo */
 .instruction-notice {
-    background-color: #fff3cd;
-    color: #856404;
-    border: 1px solid #ffeeba;
-    border-radius: 5px;
-    padding: 15px;
-    margin: 20px auto; /* Centraliza o aviso e adiciona espaçamento */
-    max-width: 800px; /* Garante que o aviso não ultrapasse a largura do contêiner */
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    clear: both; /* Garante que o aviso não flutue ao lado de outros elementos */
-    display: block;
-  }
-  
-  .instruction-notice h2 {
-    margin-bottom: 10px;
-    font-size: 1.5em;
-  }
-  
-  .instruction-notice p {
-    font-size: 1em;
-    line-height: 1.6;
-  }
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px auto; /* Centraliza o aviso e adiciona espaçamento */
+  max-width: 800px; /* Garante que o aviso não ultrapasse a largura do contêiner */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  clear: both; /* Garante que o aviso não flutue ao lado de outros elementos */
+  display: block;
+}
 
-  img {
-    margin-left: 0px;
-    text-align: center;
-    padding: 20px;
-  }
+.instruction-notice h2 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.instruction-notice p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+img {
+  margin-left: 0px;
+  text-align: center;
+  padding: 20px;
+}
