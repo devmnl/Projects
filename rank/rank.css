@@ -99,7 +99,7 @@ canvas {
 
     section {
         width: 100%; /* Faz as seções ocuparem toda a largura em telas pequenas */
-        margin: 10px ; /* Centraliza a seção e adiciona margem vertical */
+        margin: 0px ; /* Centraliza a seção e adiciona margem vertical */
     }
 
     .ranking img {
@@ -108,7 +108,7 @@ canvas {
     }
 
     .ranking div {
-        padding: 8px; /* Ajusta o padding em dispositivos móveis */
+        padding: 9px; /* Ajusta o padding em dispositivos móveis */
     }
 }
 
