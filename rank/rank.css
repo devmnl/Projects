@@ -31,14 +31,18 @@ main {
 }
 
 section {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Faz as seções ocuparem toda a largura */
-    max-width: 600px; /* Limita a largura máxima das seções */
-    margin: 10px auto; /* Centraliza a seção e adiciona margem vertical */
-    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    max-width: 600px;
+    margin: 0px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-items: center; /* Centraliza itens horizontalmente */
+    justify-content: center; /* Centraliza itens verticalmente */
+    text-align: center; /* Centraliza o texto dentro do container */
+    display: block;
+    clear: both;
 }
 
 h2.vemax {
