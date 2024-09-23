@@ -5,10 +5,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-x: hidden; /* Impede rolagem horizontal */
+    overflow-x: hidden; /* Remove a rolagem horizontal */
 }
 
 header {
@@ -26,13 +23,11 @@ h1 {
 
 main {
     display: flex;
-    flex-wrap: wrap; /* Permite que as seções se movam para a próxima linha em telas pequenas */
-    justify-content: center; /* Centraliza os itens */
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
     width: 100%;
-    max-width: 1200px; /* Largura máxima do contêiner principal */
-    margin-top: 10px;
-    padding: 0 0px; /* Adiciona padding nas laterais */
-    padding-left: 30px;
+    padding: 0; /* Remove padding nas laterais para evitar espaços */
+    overflow-y: auto; /* Permite rolagem vertical */
 }
 
 section {
@@ -42,7 +37,7 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%; /* Faz as seções ocuparem toda a largura */
     max-width: 600px; /* Limita a largura máxima das seções */
-    margin: 10px; /* Adiciona margem vertical */
+    margin: 10px auto; /* Centraliza a seção e adiciona margem vertical */
     box-sizing: border-box; /* Inclui padding e borda na largura total */
 }
 
@@ -74,7 +69,6 @@ canvas {
     margin: 20px 0;
     max-width: 100%; /* Garante que o canvas não exceda a largura da tela */
     min-height: 200px; /* Altura mínima para o canvas */
-   
 }
 
 .ranking div {
@@ -101,7 +95,7 @@ canvas {
 
     section {
         width: 100%; /* Faz as seções ocuparem toda a largura em telas pequenas */
-        margin: 10px 0; /* Adiciona margem vertical */
+        margin: 10px auto; /* Centraliza a seção e adiciona margem vertical */
     }
 
     .ranking img {
