@@ -1,4 +1,8 @@
-/* styles.css */
+/* rank.css */
+* {
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f2f5;
@@ -6,6 +10,9 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Remove a rolagem horizontal */
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
 }
 
 header {
@@ -25,24 +32,19 @@ main {
     display: flex;
     flex-direction: column; /* Coloca os itens em coluna */
     align-items: center; /* Centraliza horizontalmente */
-    width: 100%;
-    padding: 0; /* Remove padding nas laterais para evitar espaços */
+    width: 100%; /* Faz o main ocupar toda a largura */
+    padding: 0; /* Remove padding para evitar espaços */
     overflow-y: auto; /* Permite rolagem vertical */
 }
 
 section {
-    max-width: 600px;
-    margin: 0px;
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    align-items: center; /* Centraliza itens horizontalmente */
-    justify-content: center; /* Centraliza itens verticalmente */
-    text-align: center; /* Centraliza o texto dentro do container */
-    display: block;
-    clear: both;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Faz as seções ocuparem toda a largura */
+    max-width: 600px; /* Limita a largura máxima das seções */
+    margin: 10px auto; /* Centraliza a seção e adiciona margem vertical */
 }
 
 h2.vemax {
@@ -99,7 +101,7 @@ canvas {
 
     section {
         width: 100%; /* Faz as seções ocuparem toda a largura em telas pequenas */
-        margin: 0px ; /* Centraliza a seção e adiciona margem vertical */
+        margin: 10px auto; /* Centraliza a seção e adiciona margem vertical */
     }
 
     .ranking img {
@@ -108,7 +110,7 @@ canvas {
     }
 
     .ranking div {
-        padding: 9px; /* Ajusta o padding em dispositivos móveis */
+        padding: 8px; /* Ajusta o padding em dispositivos móveis */
     }
 }
 
@@ -128,5 +130,6 @@ canvas {
     background: #021bbd; /* Cor ao passar o mouse */
     transform: scale(1.05); /* Aumenta um pouco o tamanho ao passar o mouse */
 }
+
 
 
