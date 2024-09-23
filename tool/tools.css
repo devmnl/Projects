@@ -308,23 +308,3 @@
     text-align: center;
     padding: 20px;
   }
-
-  
-/* Estilo para o footer */
-.footer {
-  background-color: #1c1c1c;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-
-
-
-
-/* Adiciona margem ao conteúdo para não sobrepor o rodapé */
-body {
-  margin-bottom: 50px; /* Espaço suficiente para o rodapé */
-}
-

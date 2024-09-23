@@ -4,6 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   <title>Sobre Manoel Franco</title>
   <style>
     /* Estilo geral */
@@ -91,24 +95,44 @@
       }
     }
 
-    /* Estilo do footer */
-    .footer {
-      margin-top: 50px;
-      text-align: center;
-    }
+    .dock {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1c1c1c;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
 
-    .footer a {
-      background-color: #2a5298;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
+.dock-item {
+  color: #5c6bc0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  flex-grow: 1;
+}
 
-    .footer a:hover {
-      background-color: #38ef7d;
-    }
+.dock-item i {
+  font-size: 24px;
+  display: block;
+}
+
+.dock-item span {
+  margin-top: 5px;
+  display: block;
+  font-size: 12px;
+}
+
+.dock-item:hover {
+  background-color: #4caf4f00;
+  color: white;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
   </style>
 </head>
 <body>
@@ -166,8 +190,23 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <a href="index.html" class="button-back">Voltar</a>
+    <footer class="dock">
+      <a href="/index.html" class="dock-item">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="/tool/tools.html" class="dock-item">
+        <i class="fas fa-wrench"></i>
+        <span>Tools</span>
+      </a>
+      <a href="/sobre-mim.html" class="dock-item">
+        <i class="fas fa-info-circle"></i>
+        <span>About</span>
+      </a>
+      <a href="manutencao.html" class="dock-item">
+        <i class="fas fa-sign-in-alt"></i>
+        <span>Login</span>
+      </a>
     </footer>
   </div>
 </body>
