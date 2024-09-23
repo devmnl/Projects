@@ -83,10 +83,9 @@ select:focus {
   outline: none;
 }
 
-button,
-.button {
+.button, .button-sentidos {
   display: inline-block;
-  background-color: #5c6bc0;
+  background-color: #5c6bc0; /* Cor principal */
   color: white;
   padding: 12px 25px;
   margin: 4px;
@@ -94,110 +93,46 @@ button,
   text-decoration: none;
   text-align: center;
   font-size: 1.1rem;
-  border: none;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #3f51b5; /* Borda com tom mais escuro */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra suave */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
   cursor: pointer;
   width: 100%;
 }
 
-.button-avisos {
-  display: inline-block;
-  background-color: #16c792;
-  color: white;
-  padding: 12px 25px;
-  margin: 4px;
-  border-radius: 10px;
-  text-decoration: none;
-  text-align: center;
-  font-size: 1.1rem;
-  border: none;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  width: 100%;
+.button:hover, .button-sentidos:hover {
+  background-color: #7986cb; /* Tom mais claro no hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px); /* Elevação suave ao passar o mouse */
 }
 
-.button-sentidos {
-  display: inline-block;
-  background-color: #5c6bc0;
-  color: white;
-  padding: 12px 25px;
-  margin: 4px;
-  border-radius: 10px;
-  text-decoration: none;
-  text-align: center;
-  font-size: 1.1rem;
-  border: none;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  width: 100%;
-}
 
-.button-sind {
-  display: inline-block;
-  background-color: #f19925;
-  color: white;
-  padding: 12px 25px;
-  margin: 4px;
-  border-radius: 10px;
-  text-decoration: none;
-  text-align: center;
-  font-size: 1.1rem;
-  border: none;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  width: 100%;
-}
 
 .button-vemax {
   display: inline-block;
-  background-color: yellow;
-  color: #363535;
+  background-color: yellow; /* Cor de fundo original */
+  color: #363535; /* Cor do texto */
   padding: 12px 25px;
   margin: 4px;
   border-radius: 10px;
   text-decoration: none;
   text-align: center;
   font-size: 1.1rem;
-  border: none;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #383737; /* Cor da borda */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
   cursor: pointer;
   width: 100%;
   font-weight: bold;
-  border: 2px solid; /* Defina a largura e o estilo da borda */
-  border-color: #383737;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra suave */
 }
 
-.button-aboutme {
-  display: inline-block;
-  background: linear-gradient(135deg, #1e3c72, #2a5298, #11998e, #38ef7d);
-  color: rgb(255, 255, 255);
-  padding: 12px 25px;
-  margin: 4px;
-  border-radius: 10px;
-  text-decoration: none;
-  text-align: center;
-  font-size: 1.1rem;
-  border: none;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  width: 100%;
+.button-vemax:hover {
+  background-color: #f7d82a; /* Tom mais claro no hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px); /* Elevação suave ao passar o mouse */
 }
 
-.button-manual {
-  display: inline-block;
-  background: linear-gradient(135deg, #6a11cb, #b721ff, #fc4a1a, #f7b733);
-  color: rgb(255, 255, 255);
-  padding: 12px 25px;
-  margin: 4px;
-  border-radius: 10px;
-  text-decoration: none;
-  text-align: center;
-  font-size: 1.1rem;
-  border: none;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  width: 100%;
-}
+
 
 button:hover,
 .button:hover,
@@ -208,30 +143,17 @@ button:focus,
   outline: none;
 }
 
-.button-vemax:hover {
-  background-color: #bfc206;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
-}
 
-.button-avisos:hover {
-  background-color: #4dc56b;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
-}
+
 
 .button-sentidos:hover {
   background-color: #1873be;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
 }
 
-.button-sind:hover {
-  background-color: #eeaf27;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
-}
 
-.button-aboutme:hover {
-  background-color: #041b68;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
-}
+
+
 
 .result {
   margin-top: 20px;
