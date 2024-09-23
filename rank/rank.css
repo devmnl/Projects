@@ -95,7 +95,7 @@ canvas {
 
     section {
         width: 100%; /* Faz as seções ocuparem toda a largura em telas pequenas */
-        margin: 10px auto; /* Centraliza a seção e adiciona margem vertical */
+        margin: 10px ; /* Centraliza a seção e adiciona margem vertical */
     }
 
     .ranking img {
