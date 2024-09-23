@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden; /* Impede rolagem horizontal */
 }
 
 header {
@@ -26,12 +27,12 @@ h1 {
 main {
     display: flex;
     flex-wrap: wrap; /* Permite que as seções se movam para a próxima linha em telas pequenas */
-    justify-content: space-around;
+    justify-content: center; /* Centraliza os itens */
     width: 100%;
-    max-width: 1200px;
+    max-width: 1200px; /* Largura máxima do contêiner principal */
     margin-top: 10px;
-    margin-left: 40px;
-    padding: 0 10px; /* Adiciona um pouco de padding nas laterais */
+    padding: 0 20px; /* Adiciona padding nas laterais */
+    padding-left: 60px;
 }
 
 section {
@@ -39,8 +40,10 @@ section {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: calc(45% - 20px); /* Ajusta a largura para permitir margens */
-    margin: 10px; /* Adiciona margem para espaçamento */
+    width: 100%; /* Faz as seções ocuparem toda a largura */
+    max-width: 600px; /* Limita a largura máxima das seções */
+    margin: 10px; /* Adiciona margem vertical */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
 }
 
 h2.vemax {
@@ -53,7 +56,6 @@ h2.vemax {
     padding: 5px;
     border: 2px solid; /* Defina a largura e o estilo da borda */
     border-color: #7c7575;
-
 }
 
 h2.profama {
@@ -71,6 +73,8 @@ h2.profama {
 canvas {
     margin: 20px 0;
     max-width: 100%; /* Garante que o canvas não exceda a largura da tela */
+    min-height: 200px; /* Altura mínima para o canvas */
+   
 }
 
 .ranking div {
@@ -113,12 +117,18 @@ canvas {
 .button-back {
     text-decoration: none;
     padding: 10px 20px;
-    background:#032ef1;
+    background: #032ef1;
     color: #ffffff; /* Cor branca para o texto */
     border-radius: 5px;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease; /* Adiciona uma transição para transformação */
     border: none; /* Remover a borda */
     margin: 7px;
     font-weight: bold;
-  }
-  
+}
+
+.button-back:hover {
+    background: #021bbd; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Aumenta um pouco o tamanho ao passar o mouse */
+}
+
+
