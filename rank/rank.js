@@ -1,8 +1,9 @@
 // scripts.js
 
 // Dados fictícios para cada máquina com cores personalizadas
-const dataMachine1 = [2784, 3341, 2456, 3187]; 
-const dataMachine2 = [2953, 2234, 3410, 2621];
+const dataMachine1 = [0, 0, 0, 0];
+const dataMachine2 = [0, 0, 0, 0];
+
 
  
 
@@ -77,7 +78,7 @@ const generateRanking = (data, employees, elementId) => {
 
         // Cria o texto do funcionário com a cor correspondente
         const text = document.createElement('span');
-        text.textContent = `${item.name}: ${item.value} t`;
+        text.innerHTML = `${item.name}: <span style="color: gray; font-weight: bold;">${item.value.toLocaleString()} t</span>`;
         text.style.color = item.color.replace('0.6', '1'); // Aplica a cor correspondente
 
         // Adiciona a imagem e o texto ao div
