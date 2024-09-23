@@ -1,8 +1,10 @@
 // scripts.js
 
 // Dados fictícios para cada máquina com cores personalizadas
-const dataMachine1 = [1200, 800, 900, 1100]; 
-const dataMachine2 = [1300, 1400, 1000, 1050]; 
+const dataMachine1 = [2784, 3341, 2456, 3187]; 
+const dataMachine2 = [2953, 2234, 3410, 2621];
+
+ 
 
 const employeesMachine1 = [
     { name: 'MARCIO', image: '/images/default-user.png', color: 'rgba(255, 99, 132, 0.6)' },

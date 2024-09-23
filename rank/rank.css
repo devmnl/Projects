@@ -31,6 +31,12 @@ h1 {
 p{
     color: gray;
     text-align: center;
+    font-size: 18px;
+}
+
+p>span {
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 main {
