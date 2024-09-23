@@ -15,7 +15,9 @@
     />
     <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="/style.css" />
-    <script>navigator.serviceWorker.register("/pwabuilder-adv-sw.js")</script> 
+    <script>
+      navigator.serviceWorker.register("/pwabuilder-adv-sw.js");
+    </script>
     <style>
       /* Estilos básicos para o modal de senha */
       #passwordModal {
@@ -25,38 +27,57 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(243, 239, 239, 0.726);
+        background-color: rgba(0, 0, 0, 0.8); /* Escurece um pouco mais */
         justify-content: center;
         align-items: center;
+        backdrop-filter: blur(
+          5px
+        ); /* Adiciona um efeito de desfoque ao fundo */
       }
+
       #passwordModal .modal-content {
-        background-color: rgb(0, 0, 0);
+        background-color: #1c1c1c; /* Escurece o fundo do modal */
         color: yellow;
-        padding: 20px;
-        border-radius: 10px;
+        padding: 30px;
+        border-radius: 12px; /* Borda mais suave */
         text-align: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra mais suave */
+        max-width: 400px; /* Largura máxima do modal */
+        margin: 0 auto; /* Centraliza o modal */
       }
+
       .error-message {
         color: red;
         margin-top: 10px;
         display: none;
       }
+
       .modal-buttons {
         margin-top: 20px;
       }
+
       .modal-buttons button {
-        margin: 5px 0px;
-        padding: 10px 20px;
+        margin: 5px;
+        padding: 12px 18px; /* Aumenta um pouco o padding */
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s; /* Adiciona uma transição suave */
       }
 
       input {
-        border-radius: 10px;
-        padding: 9px;
-        font-size: 15px;
-        margin: 5px;
+        border-radius: 5px; /* Borda mais suave */
+        padding: 10px;
+        font-size: 16px; /* Aumenta um pouco a fonte */
+        margin: 10px 0; /* Espaço em cima e embaixo */
+        border: 2px solid yellow; /* Borda amarela para o input */
+        background-color: #333; /* Fundo mais escuro para o input */
+        color: white; /* Texto branco no input */
+      }
+
+      input:focus {
+        outline: none; /* Remove o contorno padrão */
+        border-color: #4caf50; /* Borda verde ao focar */
       }
 
       .close-modal {
@@ -66,7 +87,9 @@
 
       .close-modal:hover {
         background-color: #f53f32;
+        transform: scale(1.05); /* Aumenta um pouco o botão ao passar o mouse */
       }
+
       .enter-modal {
         background-color: #4caf50;
         color: white;
@@ -74,6 +97,7 @@
 
       .enter-modal:hover {
         background-color: #32d338;
+        transform: scale(1.05); /* Aumenta um pouco o botão ao passar o mouse */
       }
 
       .button-download {
@@ -125,7 +149,6 @@
         display: block;
         opacity: 1;
       }
-  
     </style>
   </head>
   <body>
@@ -192,7 +215,7 @@
         class="footer-link"
         aria-label="Visite o perfil de Manoel Franco no GitHub"
       >
-      &#x1F449; By DevMnL
+        &#x1F449; By DevMnL
       </a>
     </footer>
 
@@ -262,7 +285,6 @@
 
       // Iniciar o slideshow
       window.onload = changeImage;
-
     </script>
   </body>
 </html>
