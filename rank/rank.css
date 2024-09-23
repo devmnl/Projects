@@ -16,7 +16,7 @@ body {
 }
 
 header {
-    background-color: #0044cc;
+    background: linear-gradient(135deg, #6a11cb, #b721ff, #fc4a1a, #f7b733);
     color: #fff;
     padding: 20px;
     width: 100%;
@@ -61,7 +61,7 @@ h2.vemax {
 
 h2.profama {
     text-align: center;
-    color: rgb(253, 115, 3);
+    color: rgb(253, 153, 3);
     font-weight: bold;
     font-size: 30px;
     background-color: #c51d1dd0;
