@@ -32,7 +32,7 @@ main {
     max-width: 1200px; /* Largura máxima do contêiner principal */
     margin-top: 10px;
     padding: 0 0px; /* Adiciona padding nas laterais */
-    padding-left: 40px;
+    padding-left: 30px;
 }
 
 section {
