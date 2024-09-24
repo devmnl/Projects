@@ -8,17 +8,17 @@ const dataMachine2 = [0, 0, 0, 0];
  
 
 const employeesMachine1 = [
-    { name: 'MARCIO', image: '/images/default-user.png', color: 'rgba(255, 99, 132, 0.6)' },
+    { name: 'MARCIO', image: '/images/marcio.jpeg', color: 'rgba(255, 99, 132, 0.6)' },
     { name: 'MANOEL', image: '/images/manoel.jpeg', color: 'rgba(54, 162, 235, 0.6)' },
-    { name: 'WESLEY', image: '/images/default-user.png', color: 'rgba(255, 159, 64, 0.6)' },
-    { name: 'LUIZ', image: '/images/default-user.png', color: 'rgba(153, 102, 255, 0.6)' }
+    { name: 'WESLEY', image: '/images/wesley.jpeg', color: 'rgba(255, 159, 64, 0.6)' },
+    { name: 'LUIZ', image: '/images/luiz.jpeg', color: 'rgba(153, 102, 255, 0.6)' }
 ];
 
 const employeesMachine2 = [
     { name: 'RENÊ', image: '/images/rene.jpeg', color: 'rgba(153, 102, 255, 0.6)' },
     { name: 'VITOR', image: '/images/default-user.png', color: 'rgba(255, 99, 132, 0.6)' },
     { name: 'DOUGLAS', image: '/images/default-user.png', color: 'rgba(54, 162, 235, 0.6)' },
-    { name: 'ERIC', image: '/images/default-user.png', color: 'rgba(255, 159, 64, 0.6)' }
+    { name: 'ERIC', image: '/images/eric.jpeg', color: 'rgba(255, 159, 64, 0.6)' }
 ]
 
 // Função de configuração do gráfico com cores personalizadas
