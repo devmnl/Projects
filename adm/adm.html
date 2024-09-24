@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserir Produção</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/adm/adm.css">
+</head>
+<body>
+
+    <h1>Inserir Produção</h1>
+    
+    <!-- Formulário para Máquina 1 -->
+    <h2>Máquina 1</h2>
+    <form id="formMachine1">
+        <label for="marcio">MARCIO:</label>
+        <input type="number" id="marcio" name="marcio" step="0.01" required><br>
+
+        <label for="manoel">MANOEL:</label>
+        <input type="number" id="manoel" name="manoel" step="0.01" required><br>
+
+        <label for="wesley">WESLEY:</label>
+        <input type="number" id="wesley" name="wesley" step="0.01" required><br>
+
+        <label for="luiz">LUIZ:</label>
+        <input type="number" id="luiz" name="luiz" step="0.01" required><br>
+        
+        <button type="button" onclick="updateMachineData(1)">Atualizar Produção Máquina 1</button>
+    </form>
+
+    <!-- Formulário para Máquina 2 -->
+    <h2>Máquina 2</h2>
+    <form id="formMachine2">
+        <label for="rene">RENÊ:</label>
+        <input type="number" id="rene" name="rene" step="0.01" required><br>
+
+        <label for="vitor">VITOR:</label>
+        <input type="number" id="vitor" name="vitor" step="0.01" required><br>
+
+        <label for="douglas">DOUGLAS:</label>
+        <input type="number" id="douglas" name="douglas" step="0.01" required><br>
+
+        <label for="eric">ERIC:</label>
+        <input type="number" id="eric" name="eric" step="0.01" required><br>
+
+        <button type="button" onclick="updateMachineData(2)">Atualizar Produção Máquina 2</button>
+    </form>
+
+    <!-- Gráficos -->
+    <h2>Gráfico Máquina 1</h2>
+    <canvas id="chartMachine1" width="400" height="200"></canvas>
+    <div id="rankingMachine1"></div>
+
+    <h2>Gráfico Máquina 2</h2>
+    <canvas id="chartMachine2" width="400" height="200"></canvas>
+    <div id="rankingMachine2"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
