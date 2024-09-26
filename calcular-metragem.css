@@ -38,7 +38,7 @@ header {
 /* Estilo do contêiner */
 .container {
     max-width: 600px;
-    margin-top: 200px; /* Espaço abaixo do cabeçalho fixo */
+    margin-top: 0px; /* Espaço abaixo do cabeçalho fixo */
     background-color: #ffffff;
     padding: 30px;
     border-radius: 15px;
