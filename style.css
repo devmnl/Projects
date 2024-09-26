@@ -19,14 +19,17 @@
   }
 
   header {
-    display: flex;
-    align-items: center;
-    padding: 0px;
+    position: fixed; /* Faz o cabeçalho ficar fixo */
+    top: 0; /* Posiciona o cabeçalho no topo */
+    left: 0; /* Alinha o cabeçalho à esquerda */
+    width: 100%; /* O cabeçalho ocupa toda a largura da página */
+    padding: 0px; /* Você pode ajustar o padding conforme necessário */
     background-color: #f0f2f5; /* Fundo claro e suave */
-  }
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
   
   .logo {
-    height: 150px; /* Adjust as needed */
+    height: 90px; /* Adjust as needed */
     margin: 0px;
     padding: 0;
   }
@@ -37,6 +40,7 @@
   .container {
     max-width: 600px;
     margin: 0px;
+    margin-top: 290px;
     background-color: #ffffff;
     padding: 30px;
     border-radius: 15px;
@@ -45,7 +49,7 @@
     align-items: center; /* Centraliza itens horizontalmente */
     justify-content: center; /* Centraliza itens verticalmente */
     text-align: center; /* Centraliza o texto dentro do container */
-    display: block;
+    display: flex;
     clear: both;
   }
   
