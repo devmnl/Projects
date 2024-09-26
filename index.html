@@ -246,31 +246,6 @@
       </a>
     </footer>
 
-    <!-- Modal para inserir a senha -->
-    <div id="passwordModal">
-      <div class="modal-content">
-        <h2>(Exclusivo para operadores)<br />Didite a senha.</h2>
-        <input
-          type="password"
-          id="passwordInput"
-          placeholder="Senha"
-          inputmode="numeric"
-          pattern="[0-9]*"
-        />
-
-        <!-- Botões de ação no modal -->
-        <div class="modal-buttons">
-          <button class="enter-modal" onclick="checkPassword()">Entrar</button>
-          <button class="close-modal" onclick="closePasswordModal()">
-            Cancelar
-          </button>
-        </div>
-
-        <p class="error-message" id="errorMessage">
-          Senha incorreta. Tente novamente.
-        </p>
-      </div>
-    </div>
 
     <script>
       // Função para abrir o modal de senha
