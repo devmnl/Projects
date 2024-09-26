@@ -118,7 +118,11 @@ const generateRanking = (data, employees, elementId) => {
 
         // Cria o texto do funcionário com a colocação e cor correspondente
         const text = document.createElement('span');
-        text.innerHTML = `${index + 1}º - ${item.name}: <span style="color: gray; font-weight: bold;">${formattedValue}</span>`;
+        if (item.value === 0) {
+            text.innerHTML = `${item.name}: <span style="color: gray; font-weight: bold;">-</span>`;
+        } else {
+            text.innerHTML = `${index + 1}º - ${item.name}: <span style="color: gray; font-weight: bold;">${formattedValue}</span>`;
+        }
         text.style.color = item.color.replace('0.6', '1'); // Aplica a cor correspondente
 
         // Adiciona a imagem e o texto ao div
