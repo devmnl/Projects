@@ -2,10 +2,10 @@
 
 // Dados fictícios organizados por operadores para a Máquina 1
 const dataMachine1 = [
-    { name: 'MARCIO', production: 8 },
-    { name: 'MANOEL', production: 3 },
-    { name: 'WESLEY', production: 6 },
-    { name: 'LUIZ', production: 7 }
+    { name: 'MARCIO', production: 0 },
+    { name: 'MANOEL', production: 0 },
+    { name: 'WESLEY', production: 0 },
+    { name: 'LUIZ', production: 0 }
 ];
 
 // Dados fictícios organizados por operadores para a Máquina 2
