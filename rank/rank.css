@@ -152,6 +152,53 @@ canvas {
     transform: scale(1.05); /* Aumenta um pouco o tamanho ao passar o mouse */
 }
 
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed; /* Fica fixo */
+    z-index: 1; /* Fica por cima */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Habilita scroll se necessário */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto com opacidade */
+}
+
+.modal>p {
+    margin: 0;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% do topo e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Pode ser mais ou menos, dependendo do tamanho da tela */
+    text-align: center;
+    border-radius: 40px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding-right: 0px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modalImage {
+    width: 200px;
+    height: auto;
+    border-radius: 50%; /* Para deixar a imagem arredondada */
+}
+
 .dock {
     position: fixed;
     bottom: 0;
